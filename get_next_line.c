@@ -47,7 +47,7 @@ int				new_line(char **str, char **line, int file_d, int result_read)
 
 int				get_next_line(const int file_d, char **line)
 {
-	static char	*str[0xffffffff];
+	static char	*str[225];
 	char		buf[BUFF_SIZE + 1];
 	char		*tmp;
 	int			result_read;

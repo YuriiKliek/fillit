@@ -20,6 +20,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <sys/wait.h>
+#include "./libft/libft.h"
 
 # define BUFF_SIZE 1
 
@@ -27,14 +28,20 @@ int		get_next_line(const int a, char **b);
 
 int		new_line(char **a, char **b, int c, int d);
 
-char	*ft_strdup(const char *str);
+char		**set_tetrimino(char *line, int count);
 
-char	*ft_strjoin(char const *s1, char const *s2);
+char		**draw_fill(char *file_name);
 
-char	**ft_strsplit(char const *s, char c);
+char		**define_tetrimino(char **str);
 
-char	*ft_strnew(size_t size);
+t_list		*make_tamplete();
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len);
+t_list		*make_tamplete1();
+
+t_list		*make_tamplete2();
+
+t_list		*make_tamplete3();
+
+void		printlst(t_list *head);
 
 #endif
