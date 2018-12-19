@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/26 16:57:50 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/26 16:57:51 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+size_t	ft_strlcat(char *dst, const char *src, size_t dst_size)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	size_t	count;
+	size_t	count_2;
 
 	count = 0;
 	count_2 = 0;
-	while(str[count])
+	if (dst_size == 0)
+		return (ft_strlen(src));
+	while (dst[count] && count < dst_size)
+		count++;
+	count_2 = count;
+	while (src[count - count_2] && count < dst_size - 1)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
+		dst[count] = src[count - count_2];
 		count++;
 	}
+	if (count_2 < dst_size)
+		dst[count] = '\0';
+	return (count_2 + ft_strlen(src));
 }

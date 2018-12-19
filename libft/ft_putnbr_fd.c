@@ -1,36 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/11/01 12:45:39 by ykliek            #+#    #+#             */
+/*   Updated: 2018/11/01 12:45:40 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
-
-	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (n < -9 || n > 9)
+		ft_putnbr_fd(n / 10, fd);
+	if (n < 0)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		if (n >= -9)
+			ft_putchar_fd('-', fd);
+		ft_putchar_fd('0' - (n % 10), fd);
 	}
+	else
+		ft_putchar_fd('0' + (n % 10), fd);
 }

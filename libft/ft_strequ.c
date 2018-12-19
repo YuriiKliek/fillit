@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/11/01 13:54:11 by ykliek            #+#    #+#             */
+/*   Updated: 2018/11/01 13:54:13 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+int		ft_strequ(char const *s1, char const *s2)
 {
 	int	count;
-	int	count_1;
-	int	count_2;
 
 	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (s1 && s2)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
+		if (ft_strlen(s1) == ft_strlen(s2))
 		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
+			while (s1[count] != '\0')
+			{
+				if (s1[count] != s2[count])
+					return (0);
+				count++;
+			}
 		}
-		if (count_2 != 4)
+		else
 			return (0);
-		count++;
 	}
+	return (1);
 }

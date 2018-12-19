@@ -1,36 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_memdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/30 11:55:24 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/30 11:55:25 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	ft_memdel(void **ap)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
-
-	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (ap)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		free(*ap);
+		*ap = NULL;
 	}
 }

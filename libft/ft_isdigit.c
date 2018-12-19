@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/29 10:36:16 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/29 10:36:22 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+int		ft_isdigit(int c)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
-
-	count = 0;
-	count_2 = 0;
-	while(str[count])
-	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
-	}
+	if (c >= 48 && c <= 57)
+		return (1);
+	else
+		return (0);
 }

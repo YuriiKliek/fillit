@@ -1,36 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/29 10:41:31 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/29 10:41:34 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+int		ft_isascii(int c)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
-
-	count = 0;
-	count_2 = 0;
-	while(str[count])
-	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
-	}
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }

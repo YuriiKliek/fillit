@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/11/01 15:08:23 by ykliek            #+#    #+#             */
+/*   Updated: 2018/11/01 15:08:25 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	char	*str;
+	int		count;
+	int		count_1;
 
 	count = 0;
-	count_2 = 0;
-	while(str[count])
+	count_1 = 0;
+	if (s1 && s2)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+		if (!str)
+			return (NULL);
+		while (s1[count] != '\0')
+			str[count_1++] = s1[count++];
+		count -= count;
+		while (s2[count] != '\0')
+			str[count_1++] = s2[count++];
+		str[count_1] = '\0';
+		return (str);
 	}
+	return (NULL);
 }

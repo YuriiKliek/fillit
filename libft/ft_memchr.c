@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/29 14:07:55 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/29 14:07:56 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	char	*str;
+	int		count;
+	char	b;
 
+	b = (char)c;
+	str = (char *)s;
 	count = 0;
-	count_2 = 0;
-	while(str[count])
+	while (count != (int)n)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
+		if (*str == b)
+			return (str);
+		str++;
 		count++;
 	}
+	return (NULL);
 }

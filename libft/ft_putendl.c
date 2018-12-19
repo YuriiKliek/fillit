@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/11/01 11:50:58 by ykliek            #+#    #+#             */
+/*   Updated: 2018/11/01 11:51:06 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	ft_putendl(char const *s)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	int count;
 
 	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (s)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
+		while (s[count] != '\0')
 		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
+			ft_putchar(s[count]);
+			count++;
 		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		ft_putchar('\n');
 	}
 }

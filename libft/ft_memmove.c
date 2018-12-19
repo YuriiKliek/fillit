@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/29 11:09:46 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/29 11:09:48 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	unsigned char	*dest;
+	unsigned char	*str;
+	int				count;
 
-	count = 0;
-	count_2 = 0;
-	while(str[count])
+	dest = dst;
+	str = (unsigned char*)src;
+	count = (int)len;
+	if (dest <= str || dest >= str + count)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		while (count--)
+			*dest++ = *str++;
 	}
+	else
+	{
+		dest += count - 1;
+		str += count - 1;
+		while (count--)
+			*dest-- = *str--;
+	}
+	return (dst);
 }

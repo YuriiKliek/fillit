@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/11/05 18:43:27 by ykliek            #+#    #+#             */
+/*   Updated: 2018/11/05 18:43:29 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	t_list	*new;
 
-	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (alst && del)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
+		while (*alst)
 		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
+			new = (*alst)->next;
+			del((*alst)->content, (*alst)->content_size);
+			free(*alst);
+			*alst = new;
 		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		*alst = NULL;
 	}
 }

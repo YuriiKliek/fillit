@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/30 16:29:27 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/30 16:29:28 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	char	*str;
+	int		count;
 
-	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (s && f)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
+		str = (char *)malloc(ft_strlen((char *)s) + 1);
+		if (!str)
+			return (NULL);
+		count = 0;
+		while (s[count] != '\0')
 		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
+			str[count] = f(s[count]);
+			count++;
 		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		str[count] = '\0';
+		return (str);
 	}
+	else
+		return (0);
 }

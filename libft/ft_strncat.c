@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/26 16:02:38 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/26 16:02:40 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int	count;
 	int	count_1;
 	int	count_2;
 
-	count = 0;
+	count_1 = ft_strlen(s1);
 	count_2 = 0;
-	while(str[count])
+	while (count_2 < (int)n && s2[count_2] != '\0')
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		s1[count_1] = s2[count_2];
+		count_1++;
+		count_2++;
 	}
+	s1[count_1] = '\0';
+	return (s1);
 }

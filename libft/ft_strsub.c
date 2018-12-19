@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/11/01 14:35:29 by ykliek            #+#    #+#             */
+/*   Updated: 2018/11/01 14:35:30 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	int		count;
+	char	*sub;
 
+	sub = (char *)malloc(len + 1);
+	if (!sub)
+		return (0);
 	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (s)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
+		while (count < (int)len)
 		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
+			sub[count] = s[start];
+			count++;
+			start++;
 		}
-		if (count_2 != 4)
-			return (0);
-		count++;
+		sub[count] = '\0';
+		return (sub);
 	}
+	return (0);
 }

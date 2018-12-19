@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/11/05 20:40:26 by ykliek            #+#    #+#             */
+/*   Updated: 2018/11/05 20:40:27 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	t_list *new;
 
-	count = 0;
-	count_2 = 0;
-	while(str[count])
+	if (lst && f)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
+		new = lst;
+		while (new != NULL)
 		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
+			f(new);
+			new = new->next;
 		}
-		if (count_2 != 4)
-			return (0);
-		count++;
 	}
 }

@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/29 19:31:11 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/29 19:31:12 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	int				count;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
+	str1 = (unsigned char*)s1;
+	str2 = (unsigned char*)s2;
 	count = 0;
-	count_2 = 0;
-	while(str[count])
+	while (count < (int)n)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
+		if (str1[count] != str2[count])
+			return (str1[count] - str2[count]);
 		count++;
 	}
+	return (0);
 }

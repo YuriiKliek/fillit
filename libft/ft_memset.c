@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/25 16:12:01 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/25 16:57:34 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	char	*str;
+	int		count;
+	int		num;
 
+	num = (int)len;
+	str = (char*)b;
 	count = 0;
-	count_2 = 0;
-	while(str[count])
+	while (count < num)
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
+		str[count] = c;
 		count++;
 	}
+	b = str;
+	return (b);
 }

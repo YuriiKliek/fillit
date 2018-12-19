@@ -1,36 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validator.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykliek <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/17 17:40:35 by ykliek            #+#    #+#             */
-/*   Updated: 2018/12/17 17:40:36 by ykliek           ###   ########.fr       */
+/*   Created: 2018/10/30 11:02:42 by ykliek            #+#    #+#             */
+/*   Updated: 2018/10/30 11:02:43 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fillit.h"
+#include "libft.h"
 
-int	check_params(char **str)
+void	*ft_memalloc(size_t size)
 {
-	int	count;
-	int	count_1;
-	int	count_2;
+	void	*s;
 
-	count = 0;
-	count_2 = 0;
-	while(str[count])
-	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
-		{
-			if (str[count] != '\n')
-				count_2++;
-			count_1++;
-		}
-		if (count_2 != 4)
-			return (0);
-		count++;
-	}
+	if (size > 2147483647)
+		return (NULL);
+	s = (void *)malloc(sizeof(*s) * (size + 1));
+	if (!s)
+		return (NULL);
+	ft_memset(s, 0, size);
+	return (s);
 }
