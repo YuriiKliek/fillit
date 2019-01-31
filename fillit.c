@@ -82,8 +82,8 @@ char		**draw_fill(char *file_name)
 		str = tmp;
 		count++;
 	}
+	printf("%s\n", str);
 	tab = set_tetrimino(str, count);
-	printf("%d\n", count);
 	tab[(count - 3) / 4] =  0;
 	tab = define_tetrimino(tab);
 	return (tab);

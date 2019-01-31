@@ -13,9 +13,8 @@
 #ifndef FILLIT_H
 # define FILLIT_H
 
-#include <stdio.h>
+#include <stdio.h> //
 #include <unistd.h>
-#include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>

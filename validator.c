@@ -22,10 +22,10 @@ int	check_params(char **str)
 	count_2 = 0;
 	while(str[count])
 	{
-		count1 = 0;
-		while (str[count][count1] != '\0')
+		count_1 = 0;
+		while (str[count][count_1] != '\0')
 		{
-			if (str[count] != '\n')
+			if (str[count][count_1] != '\n')
 				count_2++;
 			count_1++;
 		}
@@ -33,4 +33,5 @@ int	check_params(char **str)
 			return (0);
 		count++;
 	}
+	return (1);
 }
