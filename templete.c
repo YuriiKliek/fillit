@@ -14,11 +14,15 @@
 
 t_list	*make_tamplete3(t_list *head)
 {
+	char	*templete1;
 	char	*templete16;
 	char	*templete17;
 	char	*templete18;
 	char	*templete19;
 
+	templete1 = (char *)malloc(22);
+	templete1 = "##..\n#..\n#...\n....\n\0";
+	ft_lstadd(&head, ft_lstnew(templete1, 22));
 	templete16 = (char *)malloc(22);
 	templete16 = "##..\n.#..\n.#..\n....\n\0";
 	ft_lstadd(&head, ft_lstnew(templete16, 22));
@@ -88,19 +92,15 @@ t_list	*make_tamplete1(t_list *head)
 	return (head);
 }
 
-t_list	*make_tamplete()
+t_list	*make_tamplete(void)
 {
 	t_list	*head;
-	char	*templete1;
 	char	*templete2;
 	char	*templete3;
 	char	*templete4;
 	char	*templete5;
 
 	head = NULL;
-	templete1 = (char *)malloc(22);
-	templete1 = "##..\n#..\n#...\n....\n\0";
-	ft_lstadd(&head, ft_lstnew(templete1, 22));
 	templete2 = (char *)malloc(22);
 	templete2 = "##..\n##..\n....\n....\n\0";
 	ft_lstadd(&head, ft_lstnew(templete2, 22));

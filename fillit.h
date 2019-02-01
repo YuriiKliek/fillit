@@ -13,23 +13,24 @@
 #ifndef FILLIT_H
 # define FILLIT_H
 
-#include <stdio.h> //
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
-#include <string.h>
-#include <sys/wait.h>
-#include "./libft/libft.h"
+# include <stdio.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <fcntl.h>
+# include <string.h>
+# include <sys/wait.h>
+# include "./libft/libft.h"
 
 # define BUFF_SIZE 1
 
-int		get_next_line(const int a, char **b);
+int			get_next_line(const int a, char **b);
 
-int		new_line(char **a, char **b, int c, int d);
+int			new_line(char **a, char **b, int c, int d);
 
 char		**set_tetrimino(char *line, int count);
 
-char		**draw_fill(char *file_name);
+char		**draw_fill(int fd);
 
 char		**define_tetrimino(char **str);
 
@@ -41,6 +42,16 @@ t_list		*make_tamplete2();
 
 t_list		*make_tamplete3();
 
-void		printlst(t_list *head);
+//void		printlst(t_list *head);
+
+int			open_file(int fd, int fd2);
+
+int			check_params(char *str);
+
+int			conditions(char **a, int i, int j, int count);
+
+int			conditions2(char **a, int i, int j, int count);
+
+int			conditions3(char **a, int i, int j, int count);
 
 #endif

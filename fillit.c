@@ -9,7 +9,7 @@
 /*   Updated: 2018/12/15 15:17:36 by ykliek           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-                                            
+
 #include "fillit.h"
 
 char		**set_tetrimino(char *line, int count)
@@ -26,7 +26,7 @@ char		**set_tetrimino(char *line, int count)
 	{
 		count_2 = 0;
 		str[count_3] = (char *)malloc(21);
-		while(count_2 < 20)
+		while (count_2 < 20)
 		{
 			str[count_3][count_2] = line[count_1];
 			count_2++;
@@ -49,7 +49,7 @@ char		**define_tetrimino(char **str)
 	while (str[count] != NULL)
 	{
 		count_1 = 0;
-		while(str[count][count_1] != '\0')
+		while (str[count][count_1] != '\0')
 		{
 			if (str[count][count_1] == 35)
 				str[count][count_1] = count_2;
@@ -61,9 +61,8 @@ char		**define_tetrimino(char **str)
 	return (str);
 }
 
-char		**draw_fill(char *file_name)
+char		**draw_fill(int fd)
 {
-	int		fd;
 	char	*line;
 	char	**tab;
 	char	*tmp;
@@ -71,7 +70,6 @@ char		**draw_fill(char *file_name)
 	int		count;
 
 	count = 0;
-	fd = open(file_name, O_RDONLY);
 	str = ft_strnew(1);
 	while (get_next_line(fd, &line) == 1)
 	{
@@ -82,9 +80,8 @@ char		**draw_fill(char *file_name)
 		str = tmp;
 		count++;
 	}
-	printf("%s\n", str);
 	tab = set_tetrimino(str, count);
-	tab[(count - 3) / 4] =  0;
+	tab[(count - 3) / 4] = 0;
 	tab = define_tetrimino(tab);
 	return (tab);
 }

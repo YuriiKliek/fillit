@@ -10,6 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+FLAGS = -Wall -Werror -Wextra 
+
 HEADER = libft.h
 
 SRCS = *.c
@@ -19,6 +21,9 @@ OBJS = *.h
 NAME = execute
 
 all : $(NAME)
+
+# $(NAME):
+# 	gcc $(FLAGS) $(SRCS) $(OBJS) ./libft/libft.a
 
 $(NAME):
 	gcc $(SRCS) $(OBJS) ./libft/libft.a
@@ -30,4 +35,3 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
-
