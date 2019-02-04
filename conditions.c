@@ -12,10 +12,10 @@
 
 #include "fillit.h"
 
-int		find_count(char **tab, int i, int i2)
+int    find_count(char **tab, int i)
 {
 	int count;
-	int	count_1;
+	int  count_1;
 
 	count_1 = 0;
 	count = 0;
@@ -28,12 +28,12 @@ int		find_count(char **tab, int i, int i2)
 	return (count_1);
 }
 
-int		conditions4(char **tab, int i, int i2)
+int    conditions4(char **tab, int i)
 {
 	int count;
-	int	count_1;
+	int  count_1;
 
-	count_1 = find_count(tab, i, i2);
+	count_1 = find_count(tab, i);
 	count = 0;
 	i = i + 2;
 	if (count_1 == 0)
@@ -109,11 +109,24 @@ int		conditions3(char **a, int i, int i2, int count)
 {
 	if (i != 0 && i2 != 0 && i != (count - 1) && i2 != 3)
 	{
-		if (a[i + 1][i2] != '#' && a[i][i2 + 1]
+		if (a[i + 1][i2] != '#' && a[i][i2 + 1] != '#'
 			&& a[i][i2 - 1] != '#' && a[i - 1][i2] != '#')
 			return (0);
+		if (a[i + 1][i2 + 1] == '#')
+			if (a[i + 1][i2] != '#'  && a[i][i2 + 1] != '#')
+				return (0);
+		if (a[i + 1][i2 - 1] == '#')
+			if (a[i + 1][i2] != '#' && a[i][i2 - 1] != '#')
+				return (0);
+		if (a[i - 1][i2 - 1] == '#')
+			if (a[i - 1][i2] != '#' && a[i][i2 - 1] != '#')
+				return (0);
+		if (a[i - 1][i2 + 1] == '#')
+			if (a[i - 1][i2] != '#' && a[i][i2 + 1] != '#')
+				return (0);
 	}
-	if (conditions4(a, i, i2) == 0)
-		return (0);
+	if (i % 5 != 2 && i % 5 != 3)
+		if (conditions4(a, i) == 0)
+			return (0);
 	return (1);
 }

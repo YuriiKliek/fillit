@@ -135,6 +135,9 @@ int			open_file(int fd, int fd2)
 		ft_strdel(&line);
 	}
 	tab[count] = NULL;
+	int k = 0;
+	while (k != count)
+		printf("%s\n", tab[k++]);
 	if (check_lines(tab) == 0)
 		return (0);
 	if (check_tetremino(tab, count) == 0)

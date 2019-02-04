@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/ykliek/Desktop/fillit_repo/. -I/Users/ykliek/Desktop/fillit_repo/extra -I/Users/ykliek/Desktop/fillit_repo/libft 
+C_INCLUDES = -I/Users/ykliek/Desktop/fillit/. -I/Users/ykliek/Desktop/fillit/extra -I/Users/ykliek/Desktop/fillit/libft 
 
