@@ -14,23 +14,6 @@
 
 int			check_tetremino(char **tab, int count)
 {
-	// int		i;
-	// int		j;
-	// int		tet;
-	
-	// i = 0;
-	// tet = (count + 1) / 5;
-	// while (tab[i] != NULL)
-	// {
-	// 	j = 0;
-	// 	while (tab[i][j] != '\0')
-	// 	{
-	// 		if (tab[i][j] == '#')
-	// 			check_
-	// 	}
-	// }
-	// return (1);
-
 	int		i;
 	int		i1;
 	i = 0;
@@ -135,16 +118,11 @@ int			open_file(int fd, int fd2)
 		ft_strdel(&line);
 	}
 	tab[count] = NULL;
-	int k = 0;
-	while (k != count)
-		printf("%s\n", tab[k++]);
-	if (check_lines(tab) == 0)
-		return (0);
-	if (check_tetremino(tab, count) == 0)
+	if (check_lines(tab) == 0 || check_tetremino(tab, count) == 0)
 		return (0);
 	int l = 0;
 	while (l < count)
 		ft_strdel(&tab[l++]);
 	free(tab);
-	return (1);
+	return ((count + 1) / 5);
 }

@@ -24,25 +24,31 @@
 
 # define BUFF_SIZE 1
 
+typedef struct  s_point
+{
+	int x;
+	int y;
+}				t_point;
+
+typedef struct	s_fig
+{
+	t_point	p[4];
+	int		order;
+}				t_fig;
+
+typedef struct  s_map
+{
+	char			**map;
+	char			*order;
+	struct s_map	*next;
+	struct s_map	*prev;
+}				t_map;
+
 int			get_next_line(const int a, char **b);
 
-int			new_line(char **a, char **b, int c, int d);
+void		draw_fill(int fd, int n_tetr);
 
-char		**set_tetrimino(char *line, int count);
-
-char		**draw_fill(int fd);
-
-char		**define_tetrimino(char **str);
-
-t_list		*make_tamplete();
-
-t_list		*make_tamplete1();
-
-t_list		*make_tamplete2();
-
-t_list		*make_tamplete3();
-
-//void		printlst(t_list *head);
+void		find_min_sq(t_fig *fig, int n_tetr);
 
 int			open_file(int fd, int fd2);
 
@@ -53,5 +59,9 @@ int			conditions(char **a, int i, int j, int count);
 int			conditions2(char **a, int i, int j, int count);
 
 int			conditions3(char **a, int i, int j, int count);
+
+void		print_map(char **map, int sq);
+
+char		*ft_joinc(const char *s, const char c);
 
 #endif

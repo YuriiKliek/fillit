@@ -12,76 +12,108 @@
 
 #include "fillit.h"
 
-char		**set_tetrimino(char *line, int count)
-{
-	int		count_1;
-	char	**str;
-	int		count_2;
-	int		count_3;
-
-	count_1 = 0;
-	count_3 = 0;
-	str = (char **)malloc((count - 3) / 4 + 1);
-	while (line[count_1] != '\0')
-	{
-		count_2 = 0;
-		str[count_3] = (char *)malloc(21);
-		while (count_2 < 20)
-		{
-			str[count_3][count_2] = line[count_1];
-			count_2++;
-			count_1++;
-		}
-		str[count_3][count_2] = '\0';
-		count_3++;
-	}
-	return (str);
-}
-
-char		**define_tetrimino(char **str)
+void		print_struct(t_fig *tmp, int n_tetr)
 {
 	int		count;
-	int		count_1;
-	int		count_2;
+	int		i;
 
 	count = 0;
-	count_2 = 65;
-	while (str[count] != NULL)
+	while (count < n_tetr)
 	{
-		count_1 = 0;
-		while (str[count][count_1] != '\0')
+		printf("ORDER: %d\n", tmp[count].order);
+		i = 0;
+		while (i < 4)
 		{
-			if (str[count][count_1] == 35)
-				str[count][count_1] = count_2;
-			count_1++;
+			printf("xy%d [%d: %d]\n", i, tmp[count].p[i].x, tmp[count].p[i].y);
+			i++;
 		}
 		count++;
-		count_2++;
 	}
-	return (str);
 }
 
-char		**draw_fill(int fd)
+void		move_to_start(t_fig *tmp)
+{
+	int min_x;
+	int min_y;
+	int i;
+
+	i = 0;
+	min_x = 4;
+	min_y = 4;
+	while (i < 4)
+	{
+		if (tmp->p[i].x < min_x)
+			min_x = tmp->p[i].x;
+		if (tmp->p[i].y < min_y)
+			min_y = tmp->p[i].y;
+		i++;
+	}
+	i = 0;
+	while (i < 4)
+	{
+		tmp->p[i].x -= min_x;
+		tmp->p[i].y -= min_y;
+		i++;
+	}
+}
+
+t_fig		process_figure(char **str, int order)
+{
+	int		x;
+	int		y;
+	int		count;
+	t_fig	tmp;
+
+	x = 0;
+	count = 0;
+	tmp.order = order;
+	while (x < 4)
+	{
+		y = 0;
+		while (y < 4)
+		{
+			if (str[x][y] == '#')
+			{
+				tmp.p[count].x = y;
+				tmp.p[count].y = x;
+				count++;
+			}
+			y++;
+		}
+		x++;
+	}
+	move_to_start(&tmp);
+	return (tmp);
+}
+
+void		draw_fill(int fd, int n_tetr)
 {
 	char	*line;
 	char	**tab;
-	char	*tmp;
-	char	*str;
+	int		i;
 	int		count;
+	t_fig	fig[n_tetr];
 
+	i = 0;
 	count = 0;
-	str = ft_strnew(1);
+	tab = (char **)malloc(sizeof(char*) * 4 * 6);
+//	fig = (t_fig*)malloc(sizeof(t_fig) * n_tetr);
 	while (get_next_line(fd, &line) == 1)
 	{
-		line[4] = '\n';
-		line[5] = '\0';
-		tmp = ft_strjoin(str, line);
-		free(str);
-		str = tmp;
-		count++;
+		if (i != 5)
+			tab[i] = ft_strdup(line);
+		i = (i != 4) ? i + 1 : 0;
+		if (i == 4)
+		{
+			fig[count] = process_figure(tab, count + 1);
+			count++;
+			int l = 0;
+			while (l < i)
+				ft_strdel(&tab[l++]);
+		}
+		ft_strdel(&line);
 	}
-	tab = set_tetrimino(str, count);
-	tab[(count - 3) / 4] = 0;
-	tab = define_tetrimino(tab);
-	return (tab);
+	free(tab);
+	// print_struct(fig, n_tetr);
+	find_min_sq(fig, n_tetr);
 }

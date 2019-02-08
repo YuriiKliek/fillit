@@ -12,7 +12,7 @@ unistd.h
 stdlib.h
 -
 
-/Users/ykliek/Desktop/fillit/conditions.c
+/Users/ykliek/Desktop/fillit/fillit.c
 fillit.h
 /Users/ykliek/Desktop/fillit/fillit.h
 
@@ -33,10 +33,4 @@ sys/wait.h
 -
 ./libft/libft.h
 /Users/ykliek/Desktop/fillit/./libft/libft.h
-
-/Users/ykliek/Desktop/fillit/main.c
-stdio.h
--
-fillit.h
-/Users/ykliek/Desktop/fillit/fillit.h
 

@@ -123,6 +123,33 @@ fillit_repo/fast:
 	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/build
 .PHONY : fillit_repo/fast
 
+algorithm.o: algorithm.c.o
+
+.PHONY : algorithm.o
+
+# target to build an object file
+algorithm.c.o:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/algorithm.c.o
+.PHONY : algorithm.c.o
+
+algorithm.i: algorithm.c.i
+
+.PHONY : algorithm.i
+
+# target to preprocess a source file
+algorithm.c.i:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/algorithm.c.i
+.PHONY : algorithm.c.i
+
+algorithm.s: algorithm.c.s
+
+.PHONY : algorithm.s
+
+# target to generate assembly for a file
+algorithm.c.s:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/algorithm.c.s
+.PHONY : algorithm.c.s
+
 conditions.o: conditions.c.o
 
 .PHONY : conditions.o
@@ -203,6 +230,33 @@ get_next_line.s: get_next_line.c.s
 get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/get_next_line.c.s
 .PHONY : get_next_line.c.s
+
+libft/algorithm.o: libft/algorithm.c.o
+
+.PHONY : libft/algorithm.o
+
+# target to build an object file
+libft/algorithm.c.o:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/libft/algorithm.c.o
+.PHONY : libft/algorithm.c.o
+
+libft/algorithm.i: libft/algorithm.c.i
+
+.PHONY : libft/algorithm.i
+
+# target to preprocess a source file
+libft/algorithm.c.i:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/libft/algorithm.c.i
+.PHONY : libft/algorithm.c.i
+
+libft/algorithm.s: libft/algorithm.c.s
+
+.PHONY : libft/algorithm.s
+
+# target to generate assembly for a file
+libft/algorithm.c.s:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/libft/algorithm.c.s
+.PHONY : libft/algorithm.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
@@ -1797,6 +1851,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/main.c.s
 .PHONY : main.c.s
 
+print_map.o: print_map.c.o
+
+.PHONY : print_map.o
+
+# target to build an object file
+print_map.c.o:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/print_map.c.o
+.PHONY : print_map.c.o
+
+print_map.i: print_map.c.i
+
+.PHONY : print_map.i
+
+# target to preprocess a source file
+print_map.c.i:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/print_map.c.i
+.PHONY : print_map.c.i
+
+print_map.s: print_map.c.s
+
+.PHONY : print_map.s
+
+# target to generate assembly for a file
+print_map.c.s:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/print_map.c.s
+.PHONY : print_map.c.s
+
 templete.o: templete.c.o
 
 .PHONY : templete.o
@@ -1860,6 +1941,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... fillit_repo"
+	@echo "... algorithm.o"
+	@echo "... algorithm.i"
+	@echo "... algorithm.s"
 	@echo "... conditions.o"
 	@echo "... conditions.i"
 	@echo "... conditions.s"
@@ -1869,6 +1953,9 @@ help:
 	@echo "... get_next_line.o"
 	@echo "... get_next_line.i"
 	@echo "... get_next_line.s"
+	@echo "... libft/algorithm.o"
+	@echo "... libft/algorithm.i"
+	@echo "... libft/algorithm.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"
@@ -2046,6 +2133,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... print_map.o"
+	@echo "... print_map.i"
+	@echo "... print_map.s"
 	@echo "... templete.o"
 	@echo "... templete.i"
 	@echo "... templete.s"

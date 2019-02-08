@@ -67,10 +67,12 @@ add_executable(fillit_repo
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
+        algorithm.c
         conditions.c
         fillit.c
         fillit.h
         get_next_line.c
         main.c
+        print_map.c
         templete.c
-        validator.c)
+        validator.c libft/algorithm.c algorithm.c)
