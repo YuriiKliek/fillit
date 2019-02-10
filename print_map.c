@@ -23,7 +23,6 @@ void	print_map(char **map, int sq)
 		j = 0;
 		while (j < sq)
 		{
-			// ft_putchar('a');
 			if (map[i][j] < 'A' || map[i][j] > 'Z')
 				ft_putchar('.');
 			else

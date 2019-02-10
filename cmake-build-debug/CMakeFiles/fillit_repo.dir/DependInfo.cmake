@@ -70,6 +70,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ykliek/Desktop/fillit/main.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit_repo.dir/main.c.o"
   "/Users/ykliek/Desktop/fillit/print_map.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit_repo.dir/print_map.c.o"
   "/Users/ykliek/Desktop/fillit/templete.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit_repo.dir/templete.c.o"
+  "/Users/ykliek/Desktop/fillit/tools.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit_repo.dir/tools.c.o"
   "/Users/ykliek/Desktop/fillit/validator.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit_repo.dir/validator.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

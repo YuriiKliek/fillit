@@ -1905,6 +1905,33 @@ templete.c.s:
 	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/templete.c.s
 .PHONY : templete.c.s
 
+tools.o: tools.c.o
+
+.PHONY : tools.o
+
+# target to build an object file
+tools.c.o:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/tools.c.o
+.PHONY : tools.c.o
+
+tools.i: tools.c.i
+
+.PHONY : tools.i
+
+# target to preprocess a source file
+tools.c.i:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/tools.c.i
+.PHONY : tools.c.i
+
+tools.s: tools.c.s
+
+.PHONY : tools.s
+
+# target to generate assembly for a file
+tools.c.s:
+	$(MAKE) -f CMakeFiles/fillit_repo.dir/build.make CMakeFiles/fillit_repo.dir/tools.c.s
+.PHONY : tools.c.s
+
 validator.o: validator.c.o
 
 .PHONY : validator.o
@@ -2139,6 +2166,9 @@ help:
 	@echo "... templete.o"
 	@echo "... templete.i"
 	@echo "... templete.s"
+	@echo "... tools.o"
+	@echo "... tools.i"
+	@echo "... tools.s"
 	@echo "... validator.o"
 	@echo "... validator.i"
 	@echo "... validator.s"

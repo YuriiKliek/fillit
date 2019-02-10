@@ -290,6 +290,9 @@
 		<Unit filename="/Users/ykliek/Desktop/fillit/templete.c">
 			<Option target="fillit_repo"/>
 		</Unit>
+		<Unit filename="/Users/ykliek/Desktop/fillit/tools.c">
+			<Option target="fillit_repo"/>
+		</Unit>
 		<Unit filename="/Users/ykliek/Desktop/fillit/validator.c">
 			<Option target="fillit_repo"/>
 		</Unit>

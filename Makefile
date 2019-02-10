@@ -35,3 +35,6 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+ev:
+	clear && make re && ./a.out out.txt

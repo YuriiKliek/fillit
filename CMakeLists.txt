@@ -75,4 +75,5 @@ add_executable(fillit_repo
         main.c
         print_map.c
         templete.c
+        tools.c
         validator.c libft/algorithm.c algorithm.c)

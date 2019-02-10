@@ -205,6 +205,10 @@ CMakeFiles/fillit_repo.dir/templete.c.o: .././libft/libft.h
 CMakeFiles/fillit_repo.dir/templete.c.o: ../fillit.h
 CMakeFiles/fillit_repo.dir/templete.c.o: ../templete.c
 
+CMakeFiles/fillit_repo.dir/tools.c.o: .././libft/libft.h
+CMakeFiles/fillit_repo.dir/tools.c.o: ../fillit.h
+CMakeFiles/fillit_repo.dir/tools.c.o: ../tools.c
+
 CMakeFiles/fillit_repo.dir/validator.c.o: .././libft/libft.h
 CMakeFiles/fillit_repo.dir/validator.c.o: ../fillit.h
 CMakeFiles/fillit_repo.dir/validator.c.o: ../validator.c

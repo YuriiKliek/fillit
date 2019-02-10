@@ -64,6 +64,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fillit_repo.dir/main.c.o"
   "CMakeFiles/fillit_repo.dir/print_map.c.o"
   "CMakeFiles/fillit_repo.dir/templete.c.o"
+  "CMakeFiles/fillit_repo.dir/tools.c.o"
   "CMakeFiles/fillit_repo.dir/validator.c.o"
   "CMakeFiles/fillit_repo.dir/libft/algorithm.c.o"
   "fillit_repo.pdb"

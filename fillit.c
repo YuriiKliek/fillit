@@ -20,7 +20,7 @@ void		print_struct(t_fig *tmp, int n_tetr)
 	count = 0;
 	while (count < n_tetr)
 	{
-		printf("ORDER: %d\n", tmp[count].order);
+		printf("ORDER: %d\n", tmp[count].num);
 		i = 0;
 		while (i < 4)
 		{
@@ -66,7 +66,7 @@ t_fig		process_figure(char **str, int order)
 
 	x = 0;
 	count = 0;
-	tmp.order = order;
+	tmp.num = order;
 	while (x < 4)
 	{
 		y = 0;

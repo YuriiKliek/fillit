@@ -902,9 +902,22 @@ CMakeFiles/fillit_repo.dir/templete.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit_repo.dir/templete.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ykliek/Desktop/fillit/templete.c -o CMakeFiles/fillit_repo.dir/templete.c.s
 
+CMakeFiles/fillit_repo.dir/tools.c.o: CMakeFiles/fillit_repo.dir/flags.make
+CMakeFiles/fillit_repo.dir/tools.c.o: ../tools.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/fillit_repo.dir/tools.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_repo.dir/tools.c.o   -c /Users/ykliek/Desktop/fillit/tools.c
+
+CMakeFiles/fillit_repo.dir/tools.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fillit_repo.dir/tools.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ykliek/Desktop/fillit/tools.c > CMakeFiles/fillit_repo.dir/tools.c.i
+
+CMakeFiles/fillit_repo.dir/tools.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit_repo.dir/tools.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ykliek/Desktop/fillit/tools.c -o CMakeFiles/fillit_repo.dir/tools.c.s
+
 CMakeFiles/fillit_repo.dir/validator.c.o: CMakeFiles/fillit_repo.dir/flags.make
 CMakeFiles/fillit_repo.dir/validator.c.o: ../validator.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/fillit_repo.dir/validator.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/fillit_repo.dir/validator.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_repo.dir/validator.c.o   -c /Users/ykliek/Desktop/fillit/validator.c
 
 CMakeFiles/fillit_repo.dir/validator.c.i: cmake_force
@@ -917,7 +930,7 @@ CMakeFiles/fillit_repo.dir/validator.c.s: cmake_force
 
 CMakeFiles/fillit_repo.dir/libft/algorithm.c.o: CMakeFiles/fillit_repo.dir/flags.make
 CMakeFiles/fillit_repo.dir/libft/algorithm.c.o: ../libft/algorithm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/fillit_repo.dir/libft/algorithm.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/fillit_repo.dir/libft/algorithm.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit_repo.dir/libft/algorithm.c.o   -c /Users/ykliek/Desktop/fillit/libft/algorithm.c
 
 CMakeFiles/fillit_repo.dir/libft/algorithm.c.i: cmake_force
@@ -995,6 +1008,7 @@ fillit_repo_OBJECTS = \
 "CMakeFiles/fillit_repo.dir/main.c.o" \
 "CMakeFiles/fillit_repo.dir/print_map.c.o" \
 "CMakeFiles/fillit_repo.dir/templete.c.o" \
+"CMakeFiles/fillit_repo.dir/tools.c.o" \
 "CMakeFiles/fillit_repo.dir/validator.c.o" \
 "CMakeFiles/fillit_repo.dir/libft/algorithm.c.o"
 
@@ -1066,11 +1080,12 @@ fillit_repo: CMakeFiles/fillit_repo.dir/get_next_line.c.o
 fillit_repo: CMakeFiles/fillit_repo.dir/main.c.o
 fillit_repo: CMakeFiles/fillit_repo.dir/print_map.c.o
 fillit_repo: CMakeFiles/fillit_repo.dir/templete.c.o
+fillit_repo: CMakeFiles/fillit_repo.dir/tools.c.o
 fillit_repo: CMakeFiles/fillit_repo.dir/validator.c.o
 fillit_repo: CMakeFiles/fillit_repo.dir/libft/algorithm.c.o
 fillit_repo: CMakeFiles/fillit_repo.dir/build.make
 fillit_repo: CMakeFiles/fillit_repo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Linking C executable fillit_repo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking C executable fillit_repo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/fillit_repo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

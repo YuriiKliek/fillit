@@ -33,15 +33,15 @@ typedef struct  s_point
 typedef struct	s_fig
 {
 	t_point	p[4];
-	int		order;
+	int		num;
 }				t_fig;
 
 typedef struct  s_map
 {
 	char			**map;
 	char			*order;
+	int 			last_fig;
 	struct s_map	*next;
-	struct s_map	*prev;
 }				t_map;
 
 int			get_next_line(const int a, char **b);
@@ -63,5 +63,12 @@ int			conditions3(char **a, int i, int j, int count);
 void		print_map(char **map, int sq);
 
 char		*ft_joinc(const char *s, const char c);
+
+t_map		*ft_new_lst(int min_sq, int n_tetr);
+
+
+//t_map		*ft_add_link(t_map *list);
+t_map		*ft_add_link(t_map *list, int min_sq);
+//t_map		*ft_add_link(t_map *list, int min_sq, int n_tetr);
 
 #endif
