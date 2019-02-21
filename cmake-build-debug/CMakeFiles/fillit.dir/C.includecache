@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ykliek/Desktop/fillit/./libft/libft.h
+unistd.h
+-
+stdlib.h
+-
+
+/Users/ykliek/Desktop/fillit/algorithm.c
+fillit.h
+/Users/ykliek/Desktop/fillit/fillit.h
+
+/Users/ykliek/Desktop/fillit/arr_tools.c
+fillit.h
+/Users/ykliek/Desktop/fillit/fillit.h
+
+/Users/ykliek/Desktop/fillit/fillit.h
+stdio.h
+-
+unistd.h
+-
+stdio.h
+-
+stdlib.h
+-
+fcntl.h
+-
+string.h
+-
+sys/wait.h
+-
+./libft/libft.h
+/Users/ykliek/Desktop/fillit/./libft/libft.h
+
+/Users/ykliek/Desktop/fillit/main.c
+stdio.h
+-
+fillit.h
+/Users/ykliek/Desktop/fillit/fillit.h
+

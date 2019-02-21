@@ -143,7 +143,7 @@ $(NAME):
 	ar rc $(NAME) $(FILE_FOR_LIB)
 
 clean:
-	rm -f ft_atoi.o \
+	@rm -f ft_atoi.o \
 			ft_bzero.o \
 			ft_isalnum.o \
 			ft_isalpha.o \
@@ -200,10 +200,12 @@ clean:
 			ft_strsub.o \
 			ft_strtrim.o \
 			ft_tolower.o \
-			ft_toupper.o 
+			ft_toupper.o \
+			libft.h.gch \
+			.DS_store
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all		
 

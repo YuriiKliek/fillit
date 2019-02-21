@@ -12,29 +12,45 @@
 
 FLAGS = -Wall -Werror -Wextra 
 
-HEADER = libft.h
+SRCS = algorithm.c \
+		arr_tools.c \
+		conditions.c \
+		fillit.c \
+		get_next_line.c \
+		main.c \
+		print_map.c \
+		tools.c \
+		validator.c
 
-SRCS = *.c
+OBJS = ./libft/libft.a
 
-OBJS = *.h
+HEADER = fillit.h
 
-NAME = execute
+NAME = fillit
 
 all : $(NAME)
 
 # $(NAME):
-# 	gcc $(FLAGS) $(SRCS) $(OBJS) ./libft/libft.a
+# 	gcc $(FLAGS) -o $(NAME) $(SRCS) $(OBJS) ./libft/libft.a
 
 $(NAME):
-	gcc $(SRCS) $(OBJS) ./libft/libft.a
+	@make -C libft
+	gcc $(FLAGS) -I $(HEADER) $(SRCS) $(OBJS) -o $(NAME) 
+
+# $(NAME):
+# 	gcc -o $(NAME) $(SRCS) $(OBJS) ./libft/libft.a
 
 clean:
-	rm -f a.out fillit.h.gch execute
+	@make clean -C libft
+	@rm -f fillit.h.gch .DS_store
 
 fclean: clean
-	rm -f $(NAME)
+	@make fclean -C libft
+	@rm -f $(NAME)
 
 re: fclean all
 
 ev:
-	clear && make re && ./a.out out.txt
+	clear && make re && ./$(NAME) out.txt
+# ev:
+# 	clear && make re && .$(NAME) test.txt
