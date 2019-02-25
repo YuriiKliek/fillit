@@ -16,10 +16,6 @@ stdlib.h
 fillit.h
 /Users/ykliek/Desktop/fillit/fillit.h
 
-/Users/ykliek/Desktop/fillit/arr_tools.c
-fillit.h
-/Users/ykliek/Desktop/fillit/fillit.h
-
 /Users/ykliek/Desktop/fillit/fillit.h
 stdio.h
 -
@@ -38,9 +34,7 @@ sys/wait.h
 ./libft/libft.h
 /Users/ykliek/Desktop/fillit/./libft/libft.h
 
-/Users/ykliek/Desktop/fillit/main.c
-stdio.h
--
+/Users/ykliek/Desktop/fillit/tools2.c
 fillit.h
 /Users/ykliek/Desktop/fillit/fillit.h
 

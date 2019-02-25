@@ -14,12 +14,12 @@ FLAGS = -Wall -Werror -Wextra
 
 SRCS = algorithm.c \
 		arr_tools.c \
-		conditions.c \
 		fillit.c \
 		get_next_line.c \
 		main.c \
 		print_map.c \
 		tools.c \
+		tools2.c \
 		validator.c
 
 OBJS = ./libft/libft.a
@@ -35,7 +35,7 @@ all : $(NAME)
 
 $(NAME):
 	@make -C libft
-	gcc $(FLAGS) -I $(HEADER) $(SRCS) $(OBJS) -o $(NAME) 
+	gcc -I $(HEADER) $(SRCS) $(OBJS) -o $(NAME) 
 
 # $(NAME):
 # 	gcc -o $(NAME) $(SRCS) $(OBJS) ./libft/libft.a
@@ -52,5 +52,6 @@ re: fclean all
 
 ev:
 	clear && make re && ./$(NAME) out.txt
-# ev:
-# 	clear && make re && .$(NAME) test.txt
+	
+evt:
+	clear && make re && ./$(NAME) test.txt

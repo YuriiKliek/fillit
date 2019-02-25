@@ -12,6 +12,17 @@
 
 #include "fillit.h"
 
+void	print_list(t_map *list)
+{
+	printf("\n");
+	while (list)
+	{
+		printf("order:\t%s\n", list->order);
+		list = list->next;
+	}
+	printf("\n");
+}
+
 char	*ft_joinc(const char *s, const char c)
 {
 	char	*d;
@@ -46,19 +57,6 @@ char	**alloc_mem(int min_sq)
 	return (map);
 }
 
-t_map	*ft_new_lst(int min_sq, int n_tetr)
-{
-	t_map *tmp;
-
-	tmp = (t_map *)malloc(sizeof(t_map));
-	tmp->map = alloc_mem(min_sq);
-	tmp->order = (char *)malloc(sizeof(char) * n_tetr);
-	tmp->last_fig = 0;
-	tmp->num = 0;
-	tmp->next = NULL;
-	return (tmp);
-}
-
 char	**copy_array(char **s, int min_sq)
 {
 	char	**d;
@@ -76,22 +74,45 @@ char	**copy_array(char **s, int min_sq)
 			d[i][j] = s[i][j];
 			j++;
 		}
-//		d[i][j] = '\0';
 		i++;
 	}
 	return (d);
 }
 
-t_map	*ft_add_link(t_map *list, int min_sq)
+int 	free_mem(char ***tab, char **line, int count)
 {
-	t_map *tmp;
+	// int i;
 
-	tmp = (t_map *)malloc(sizeof(t_map));
-//	tmp->map = list->map;
-	tmp->map = copy_array(list->map, min_sq);
-	tmp->order = list->order;
-	tmp->last_fig = 0;
-	tmp->num = list->num + 1;
-	tmp->next = list;
-	return (tmp);
+	// i = 0;
+	// if (*line)
+	// 	ft_strdel(line);
+	// while (i < count)
+	// 	ft_strdel(tab[i++]);
+	// free(*tab);
+	int l = 0;
+	while (l < count)
+	{
+		if (tab[l])
+			printf("%s\n", *tab[l]);
+			ft_strdel(tab[l++]);
+	}
+	free(*tab);
+	return (0);
+}
+
+void	int_zero(void *num, size_t n)
+{
+	int		*str;
+	int		i;
+	int		count;
+
+	i = (int)n;
+	str = (int*)num;
+	count = 0;
+	while (count < i)
+	{
+		str[count] = '\0';
+		count++;
+	}
+	num = str;
 }

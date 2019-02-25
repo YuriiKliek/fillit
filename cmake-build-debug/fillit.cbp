@@ -90,9 +90,6 @@
 		<Unit filename="/Users/ykliek/Desktop/fillit/arr_tools.c">
 			<Option target="fillit"/>
 		</Unit>
-		<Unit filename="/Users/ykliek/Desktop/fillit/conditions.c">
-			<Option target="fillit"/>
-		</Unit>
 		<Unit filename="/Users/ykliek/Desktop/fillit/fillit.c">
 			<Option target="fillit"/>
 		</Unit>
@@ -292,6 +289,9 @@
 			<Option target="fillit"/>
 		</Unit>
 		<Unit filename="/Users/ykliek/Desktop/fillit/tools.c">
+			<Option target="fillit"/>
+		</Unit>
+		<Unit filename="/Users/ykliek/Desktop/fillit/tools2.c">
 			<Option target="fillit"/>
 		</Unit>
 		<Unit filename="/Users/ykliek/Desktop/fillit/validator.c">

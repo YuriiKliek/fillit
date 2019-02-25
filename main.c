@@ -25,11 +25,12 @@ int		main(int argc,char **argv)
 		fd2 = open(argv[1], O_RDONLY);
 		// printf("%d\n", open_file(fd, fd2));
 		n_tetr = open_file(fd, fd2);
-		printf("\e[1;36m%c = %d\e[1;32m\n", 64 + n_tetr, n_tetr); //Delete
+		// printf("\e[1;36m%c = %d\e[1;32m\n", 64 + n_tetr, n_tetr); //Delete
 		if (n_tetr > 0 && n_tetr <= 26)
 		{
 			fd = open(argv[1], O_RDONLY);
-			draw_fill(fd, n_tetr);
+			if (draw_fill(fd, n_tetr) == 0)
+				ft_putstr("error\n");
 		}
 		else
 			ft_putstr("error\n");
@@ -38,6 +39,6 @@ int		main(int argc,char **argv)
 	}
 	else
 		printf("Pass file's name\n"); //Delete
-	// system("leaks a.out");
+	 system("leaks fillit");
 return (0);
 }

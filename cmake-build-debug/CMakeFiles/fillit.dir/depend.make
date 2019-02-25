@@ -9,10 +9,6 @@ CMakeFiles/fillit.dir/arr_tools.c.o: .././libft/libft.h
 CMakeFiles/fillit.dir/arr_tools.c.o: ../arr_tools.c
 CMakeFiles/fillit.dir/arr_tools.c.o: ../fillit.h
 
-CMakeFiles/fillit.dir/conditions.c.o: .././libft/libft.h
-CMakeFiles/fillit.dir/conditions.c.o: ../conditions.c
-CMakeFiles/fillit.dir/conditions.c.o: ../fillit.h
-
 CMakeFiles/fillit.dir/fillit.c.o: .././libft/libft.h
 CMakeFiles/fillit.dir/fillit.c.o: ../fillit.c
 CMakeFiles/fillit.dir/fillit.c.o: ../fillit.h
@@ -212,6 +208,10 @@ CMakeFiles/fillit.dir/templete.c.o: ../templete.c
 CMakeFiles/fillit.dir/tools.c.o: .././libft/libft.h
 CMakeFiles/fillit.dir/tools.c.o: ../fillit.h
 CMakeFiles/fillit.dir/tools.c.o: ../tools.c
+
+CMakeFiles/fillit.dir/tools2.c.o: .././libft/libft.h
+CMakeFiles/fillit.dir/tools2.c.o: ../fillit.h
+CMakeFiles/fillit.dir/tools2.c.o: ../tools2.c
 
 CMakeFiles/fillit.dir/validator.c.o: .././libft/libft.h
 CMakeFiles/fillit.dir/validator.c.o: ../fillit.h

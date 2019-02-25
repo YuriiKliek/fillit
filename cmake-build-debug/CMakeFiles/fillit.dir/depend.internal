@@ -9,10 +9,6 @@ CMakeFiles/fillit.dir/arr_tools.c.o
  /Users/ykliek/Desktop/fillit/./libft/libft.h
  /Users/ykliek/Desktop/fillit/arr_tools.c
  /Users/ykliek/Desktop/fillit/fillit.h
-CMakeFiles/fillit.dir/conditions.c.o
- /Users/ykliek/Desktop/fillit/./libft/libft.h
- /Users/ykliek/Desktop/fillit/conditions.c
- /Users/ykliek/Desktop/fillit/fillit.h
 CMakeFiles/fillit.dir/fillit.c.o
  /Users/ykliek/Desktop/fillit/./libft/libft.h
  /Users/ykliek/Desktop/fillit/fillit.c
@@ -213,6 +209,10 @@ CMakeFiles/fillit.dir/tools.c.o
  /Users/ykliek/Desktop/fillit/./libft/libft.h
  /Users/ykliek/Desktop/fillit/fillit.h
  /Users/ykliek/Desktop/fillit/tools.c
+CMakeFiles/fillit.dir/tools2.c.o
+ /Users/ykliek/Desktop/fillit/./libft/libft.h
+ /Users/ykliek/Desktop/fillit/fillit.h
+ /Users/ykliek/Desktop/fillit/tools2.c
 CMakeFiles/fillit.dir/validator.c.o
  /Users/ykliek/Desktop/fillit/./libft/libft.h
  /Users/ykliek/Desktop/fillit/fillit.h

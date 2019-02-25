@@ -52,15 +52,17 @@ char	**put_figure(t_fig fig, char **map, int i, int j)
 void	cycle(t_map **list, t_fig *fig, int min_sq, int n_tetr)
 {
 	int		i[3];
-
 	i[0] = ((*list)->last_fig > 0) ? (*list)->last_fig : 0;
-	i[1] = -1;
+//	i[1] = -1;
+	i[1] = ((*list)->last_xy == 0) ? 0 : (*list)->last_xy / min_sq;
+	i[2] = ((*list)->last_xy == 0) ? 0 : (*list)->last_xy % min_sq;
 //	print_map((*list)->map, min_sq);
 //	printf("\n_________\n");
-	while (++i[1] < min_sq)
+	while (i[1] < min_sq)
 	{
-		i[2] = -1;
-		while (++i[2] < min_sq)
+//		i[2] = -1;
+//		i[2] = ((*list)->last_xy == 0) ? 0 : (*list)->last_xy % min_sq;
+		while (i[2] < min_sq)
 		{
 			while (ft_strchr((*list)->order, i[0] + 65))
 				i[0]++;
@@ -73,14 +75,18 @@ void	cycle(t_map **list, t_fig *fig, int min_sq, int n_tetr)
 					*list = ft_add_link(*list, min_sq);
 					(*list)->map = put_figure(fig[i[0]], (*list)->map, i[1], i[2]);
 					(*list)->order = ft_joinc((*list)->order, 64 + fig[i[0]].num);
-					i[0] = 0;
+					(*list)->last_xy = i[1] * min_sq + i[2];
+					int_zero(&i, 3);
 //					print_map((*list)->map, min_sq);
 //					printf("\n_________\n");
 //					print_map((*list)->map, min_sq);
 //					printf("\nCYCLE 2: NUM: %d\n_________\n", (*list)->num);
 				}
 			}
+			i[2]++;
 		}
+		i[1]++;
+		i[2] = 0;
 	}
 	if ((int)ft_strlen((*list)->order) == n_tetr)
 		print_map((*list)->map, min_sq);
@@ -89,37 +95,41 @@ void	cycle(t_map **list, t_fig *fig, int min_sq, int n_tetr)
 void	alhorithmus(t_fig *fig, int n_tetr, int min_sq)
 {
 	t_map	*list;
-	int		ret;
 	int 	tmp;
+	int		last_fig;
+	int		cur_fig;
+	int 	last_xy;
 
 	list = ft_new_lst(min_sq, n_tetr);
-	ret = 0;
+	cur_fig = 0;
 	while (1)
 	{
 		cycle(&list, fig, min_sq, n_tetr);
-		if (ret == n_tetr || (int)ft_strlen(list->order) == 0)
+		last_fig = cur_fig;
+		cur_fig = (int)ft_strlen(list->order);
+		if (cur_fig == n_tetr || (int)ft_strlen(list->order) == 0)
 			break;
 		else
 		{
+			tmp = list->order[cur_fig - 1] - 64;
+			last_xy = list->last_xy;
 //			print_map(list->map, min_sq);
-			// printf("\nBEFORE: NUM: %d\n_________\n", list->num);
-			ret = (int)ft_strlen(list->order);
-			tmp = list->order[ret - 1] - 64;
-			list = backtrace(&list, min_sq);
-			list->last_fig = tmp;
-//			print_map(list->map, min_sq);
-			// printf("\nAFTER: NUM: %d\n_________\n", list->num);
-//			printf("RET: %d\tTMP: %d\n", ret, tmp);
+//			printf("\nLAST XY: %d\nCUR_FIG: %d\nLAST_FIG: %d", list->last_xy, cur_fig, last_fig);
 //			printf("\n_________\n");
+			list = backtrace(&list, min_sq);
+//			print_map(list->map, min_sq);
+//			printf("\n_________\n");
+			if (last_fig > cur_fig || check_fig(list, fig[list->last_fig], min_sq, last_xy + 1) == 0)
+			{
+				list->last_fig = tmp;
+				list->last_xy = 0;
+			}
+			else
+				list->last_xy = last_xy + 1;
 		}
 	}
-	// printf("\nBEFORE: NUM: %d\n_________\n", list->num);	
-	// list = backtrace(&list, min_sq);
-	// printf("\n0 NUM: %d\n_________\n", list->num);
-	// printf("\n1: NUM: %d\n_________\n", list->next->next->num);
-	 // free_all_list(&list, min_sq);
-	free_list(&list, min_sq);
-	if (ret < n_tetr)
+	free_all_list(&list, min_sq);
+	if (cur_fig < n_tetr)
 		alhorithmus(fig, n_tetr, min_sq + 1);
 }
 

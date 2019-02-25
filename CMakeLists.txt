@@ -69,7 +69,6 @@ add_executable(fillit
     libft/libft.h
     algorithm.c
     arr_tools.c
-    conditions.c
     fillit.c
     fillit.h
     get_next_line.c
@@ -77,5 +76,6 @@ add_executable(fillit
     print_map.c
     templete.c
     tools.c
+    tools2.c
     validator.c
     validator_old.c)

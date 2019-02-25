@@ -12,32 +12,6 @@
 
 #include "fillit.h"
 
-int			check_tetremino(char **tab, int count)
-{
-	int		i;
-	int		i1;
-	i = 0;
-	while (tab[i] != NULL)
-	{
-		i1 = 0;
-		while (tab[i][i1] != '\0')
-		{
-			if (tab[i][i1] == '#')
-			{
-				if (conditions(tab, i, i1, count) == 0)
-					return (0);
-				else if (conditions2(tab, i, i1, count) == 0)
-					return (0);
-				else if (conditions3(tab, i, i1, count) == 0)
-					return (0);
-			}
-			i1++;
-		}
-		i++;
-	}
-	return (1);
-}
-
 int			check_lines(char **tab)
 {
 	int		count;
@@ -117,12 +91,15 @@ int			open_file(int fd, int fd2)
 		count_1++;
 		ft_strdel(&line);
 	}
+	if (count % 5 != 4)
+		return (0);
 	tab[count] = NULL;
-	if (check_lines(tab) == 0 || check_tetremino(tab, count) == 0)
+	if (check_lines(tab) == 0)
 		return (0);
 	int l = 0;
 	while (l < count)
 		ft_strdel(&tab[l++]);
 	free(tab);
+	// free_mem(&tab, &line, count);
 	return ((count + 1) / 5);
 }

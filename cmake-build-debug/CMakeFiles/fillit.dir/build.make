@@ -850,22 +850,9 @@ CMakeFiles/fillit.dir/arr_tools.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit.dir/arr_tools.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ykliek/Desktop/fillit/arr_tools.c -o CMakeFiles/fillit.dir/arr_tools.c.s
 
-CMakeFiles/fillit.dir/conditions.c.o: CMakeFiles/fillit.dir/flags.make
-CMakeFiles/fillit.dir/conditions.c.o: ../conditions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/fillit.dir/conditions.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/conditions.c.o   -c /Users/ykliek/Desktop/fillit/conditions.c
-
-CMakeFiles/fillit.dir/conditions.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fillit.dir/conditions.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ykliek/Desktop/fillit/conditions.c > CMakeFiles/fillit.dir/conditions.c.i
-
-CMakeFiles/fillit.dir/conditions.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit.dir/conditions.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ykliek/Desktop/fillit/conditions.c -o CMakeFiles/fillit.dir/conditions.c.s
-
 CMakeFiles/fillit.dir/fillit.c.o: CMakeFiles/fillit.dir/flags.make
 CMakeFiles/fillit.dir/fillit.c.o: ../fillit.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/fillit.dir/fillit.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object CMakeFiles/fillit.dir/fillit.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/fillit.c.o   -c /Users/ykliek/Desktop/fillit/fillit.c
 
 CMakeFiles/fillit.dir/fillit.c.i: cmake_force
@@ -878,7 +865,7 @@ CMakeFiles/fillit.dir/fillit.c.s: cmake_force
 
 CMakeFiles/fillit.dir/get_next_line.c.o: CMakeFiles/fillit.dir/flags.make
 CMakeFiles/fillit.dir/get_next_line.c.o: ../get_next_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/fillit.dir/get_next_line.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object CMakeFiles/fillit.dir/get_next_line.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/get_next_line.c.o   -c /Users/ykliek/Desktop/fillit/get_next_line.c
 
 CMakeFiles/fillit.dir/get_next_line.c.i: cmake_force
@@ -891,7 +878,7 @@ CMakeFiles/fillit.dir/get_next_line.c.s: cmake_force
 
 CMakeFiles/fillit.dir/main.c.o: CMakeFiles/fillit.dir/flags.make
 CMakeFiles/fillit.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/fillit.dir/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building C object CMakeFiles/fillit.dir/main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/main.c.o   -c /Users/ykliek/Desktop/fillit/main.c
 
 CMakeFiles/fillit.dir/main.c.i: cmake_force
@@ -904,7 +891,7 @@ CMakeFiles/fillit.dir/main.c.s: cmake_force
 
 CMakeFiles/fillit.dir/print_map.c.o: CMakeFiles/fillit.dir/flags.make
 CMakeFiles/fillit.dir/print_map.c.o: ../print_map.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/fillit.dir/print_map.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building C object CMakeFiles/fillit.dir/print_map.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/print_map.c.o   -c /Users/ykliek/Desktop/fillit/print_map.c
 
 CMakeFiles/fillit.dir/print_map.c.i: cmake_force
@@ -917,7 +904,7 @@ CMakeFiles/fillit.dir/print_map.c.s: cmake_force
 
 CMakeFiles/fillit.dir/templete.c.o: CMakeFiles/fillit.dir/flags.make
 CMakeFiles/fillit.dir/templete.c.o: ../templete.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/fillit.dir/templete.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building C object CMakeFiles/fillit.dir/templete.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/templete.c.o   -c /Users/ykliek/Desktop/fillit/templete.c
 
 CMakeFiles/fillit.dir/templete.c.i: cmake_force
@@ -930,7 +917,7 @@ CMakeFiles/fillit.dir/templete.c.s: cmake_force
 
 CMakeFiles/fillit.dir/tools.c.o: CMakeFiles/fillit.dir/flags.make
 CMakeFiles/fillit.dir/tools.c.o: ../tools.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/fillit.dir/tools.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building C object CMakeFiles/fillit.dir/tools.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/tools.c.o   -c /Users/ykliek/Desktop/fillit/tools.c
 
 CMakeFiles/fillit.dir/tools.c.i: cmake_force
@@ -940,6 +927,19 @@ CMakeFiles/fillit.dir/tools.c.i: cmake_force
 CMakeFiles/fillit.dir/tools.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit.dir/tools.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ykliek/Desktop/fillit/tools.c -o CMakeFiles/fillit.dir/tools.c.s
+
+CMakeFiles/fillit.dir/tools2.c.o: CMakeFiles/fillit.dir/flags.make
+CMakeFiles/fillit.dir/tools2.c.o: ../tools2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building C object CMakeFiles/fillit.dir/tools2.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/fillit.dir/tools2.c.o   -c /Users/ykliek/Desktop/fillit/tools2.c
+
+CMakeFiles/fillit.dir/tools2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/fillit.dir/tools2.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ykliek/Desktop/fillit/tools2.c > CMakeFiles/fillit.dir/tools2.c.i
+
+CMakeFiles/fillit.dir/tools2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/fillit.dir/tools2.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ykliek/Desktop/fillit/tools2.c -o CMakeFiles/fillit.dir/tools2.c.s
 
 CMakeFiles/fillit.dir/validator.c.o: CMakeFiles/fillit.dir/flags.make
 CMakeFiles/fillit.dir/validator.c.o: ../validator.c
@@ -1030,13 +1030,13 @@ fillit_OBJECTS = \
 "CMakeFiles/fillit.dir/libft/ft_toupper.c.o" \
 "CMakeFiles/fillit.dir/algorithm.c.o" \
 "CMakeFiles/fillit.dir/arr_tools.c.o" \
-"CMakeFiles/fillit.dir/conditions.c.o" \
 "CMakeFiles/fillit.dir/fillit.c.o" \
 "CMakeFiles/fillit.dir/get_next_line.c.o" \
 "CMakeFiles/fillit.dir/main.c.o" \
 "CMakeFiles/fillit.dir/print_map.c.o" \
 "CMakeFiles/fillit.dir/templete.c.o" \
 "CMakeFiles/fillit.dir/tools.c.o" \
+"CMakeFiles/fillit.dir/tools2.c.o" \
 "CMakeFiles/fillit.dir/validator.c.o" \
 "CMakeFiles/fillit.dir/validator_old.c.o"
 
@@ -1104,13 +1104,13 @@ fillit: CMakeFiles/fillit.dir/libft/ft_tolower.c.o
 fillit: CMakeFiles/fillit.dir/libft/ft_toupper.c.o
 fillit: CMakeFiles/fillit.dir/algorithm.c.o
 fillit: CMakeFiles/fillit.dir/arr_tools.c.o
-fillit: CMakeFiles/fillit.dir/conditions.c.o
 fillit: CMakeFiles/fillit.dir/fillit.c.o
 fillit: CMakeFiles/fillit.dir/get_next_line.c.o
 fillit: CMakeFiles/fillit.dir/main.c.o
 fillit: CMakeFiles/fillit.dir/print_map.c.o
 fillit: CMakeFiles/fillit.dir/templete.c.o
 fillit: CMakeFiles/fillit.dir/tools.c.o
+fillit: CMakeFiles/fillit.dir/tools2.c.o
 fillit: CMakeFiles/fillit.dir/validator.c.o
 fillit: CMakeFiles/fillit.dir/validator_old.c.o
 fillit: CMakeFiles/fillit.dir/build.make

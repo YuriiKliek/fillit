@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/ykliek/Desktop/fillit/algorithm.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/algorithm.c.o"
   "/Users/ykliek/Desktop/fillit/arr_tools.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/arr_tools.c.o"
-  "/Users/ykliek/Desktop/fillit/conditions.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/conditions.c.o"
   "/Users/ykliek/Desktop/fillit/fillit.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/fillit.c.o"
   "/Users/ykliek/Desktop/fillit/get_next_line.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/get_next_line.c.o"
   "/Users/ykliek/Desktop/fillit/libft/algorithm.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/libft/algorithm.c.o"
@@ -72,6 +71,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/ykliek/Desktop/fillit/print_map.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/print_map.c.o"
   "/Users/ykliek/Desktop/fillit/templete.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/templete.c.o"
   "/Users/ykliek/Desktop/fillit/tools.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/tools.c.o"
+  "/Users/ykliek/Desktop/fillit/tools2.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/tools2.c.o"
   "/Users/ykliek/Desktop/fillit/validator.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/validator.c.o"
   "/Users/ykliek/Desktop/fillit/validator_old.c" "/Users/ykliek/Desktop/fillit/cmake-build-debug/CMakeFiles/fillit.dir/validator_old.c.o"
   )
