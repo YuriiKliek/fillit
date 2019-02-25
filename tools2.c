@@ -36,3 +36,11 @@ int 	check_fig(t_map *list, t_fig fig, int min_sq, int last_xy)
 	}
 	return (0);
 }
+
+int 	*set_int(int *count, int set1, int set2)
+{
+	count[0] = set1;
+	count[1] = set1;
+	count[2] = set2;
+	count[3] = set2;
+}

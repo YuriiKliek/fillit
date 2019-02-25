@@ -52,16 +52,12 @@ char	**put_figure(t_fig fig, char **map, int i, int j)
 void	cycle(t_map **list, t_fig *fig, int min_sq, int n_tetr)
 {
 	int		i[3];
+
 	i[0] = ((*list)->last_fig > 0) ? (*list)->last_fig : 0;
-//	i[1] = -1;
 	i[1] = ((*list)->last_xy == 0) ? 0 : (*list)->last_xy / min_sq;
 	i[2] = ((*list)->last_xy == 0) ? 0 : (*list)->last_xy % min_sq;
-//	print_map((*list)->map, min_sq);
-//	printf("\n_________\n");
 	while (i[1] < min_sq)
 	{
-//		i[2] = -1;
-//		i[2] = ((*list)->last_xy == 0) ? 0 : (*list)->last_xy % min_sq;
 		while (i[2] < min_sq)
 		{
 			while (ft_strchr((*list)->order, i[0] + 65))
@@ -70,17 +66,11 @@ void	cycle(t_map **list, t_fig *fig, int min_sq, int n_tetr)
 			{
 				if (check_free(fig[i[0]], (*list)->map, i, min_sq) == 1)
 				{
-//					print_map((*list)->map, min_sq);
-//					printf("\nCYCLE 1: NUM: %d\n_________\n", (*list)->num);
 					*list = ft_add_link(*list, min_sq);
 					(*list)->map = put_figure(fig[i[0]], (*list)->map, i[1], i[2]);
 					(*list)->order = ft_joinc((*list)->order, 64 + fig[i[0]].num);
 					(*list)->last_xy = i[1] * min_sq + i[2];
 					int_zero(&i, 3);
-//					print_map((*list)->map, min_sq);
-//					printf("\n_________\n");
-//					print_map((*list)->map, min_sq);
-//					printf("\nCYCLE 2: NUM: %d\n_________\n", (*list)->num);
 				}
 			}
 			i[2]++;
@@ -113,12 +103,7 @@ void	alhorithmus(t_fig *fig, int n_tetr, int min_sq)
 		{
 			tmp = list->order[cur_fig - 1] - 64;
 			last_xy = list->last_xy;
-//			print_map(list->map, min_sq);
-//			printf("\nLAST XY: %d\nCUR_FIG: %d\nLAST_FIG: %d", list->last_xy, cur_fig, last_fig);
-//			printf("\n_________\n");
 			list = backtrace(&list, min_sq);
-//			print_map(list->map, min_sq);
-//			printf("\n_________\n");
 			if (last_fig > cur_fig || check_fig(list, fig[list->last_fig], min_sq, last_xy + 1) == 0)
 			{
 				list->last_fig = tmp;

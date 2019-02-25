@@ -13,7 +13,7 @@
 #include <stdio.h>
 #include "fillit.h"
 
-int		main(int argc,char **argv)
+int		main(int argc, char **argv)
 {
 	int fd;
 	int fd2;
@@ -39,6 +39,6 @@ int		main(int argc,char **argv)
 	}
 	else
 		printf("Pass file's name\n"); //Delete
-	 system("leaks fillit");
+//	 system("leaks fillit");
 return (0);
 }

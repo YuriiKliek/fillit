@@ -87,4 +87,6 @@ int			check_fig(t_map *list, t_fig fig, int min_sq, int last_xy);
 
 int			check_free(t_fig fig, char **map, int *i, int min_sq);
 
+int 	*set_int(int *count, int set1, int set2);
+
 #endif

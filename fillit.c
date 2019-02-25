@@ -12,7 +12,7 @@
 
 #include "fillit.h"
 
-int 		check_point(t_fig fig, int j, int k)
+int			check_point(t_fig fig, int j, int k)
 {
 	t_point pj;
 	t_point pk;
@@ -21,7 +21,6 @@ int 		check_point(t_fig fig, int j, int k)
 	pj.y = fig.p[j].y;
 	pk.x = fig.p[k].x;
 	pk.y = fig.p[k].y;
-
 	if (pj.x == pk.x + 1 && pj.y == pk.y)
 		return (1);
 	if (pj.x == pk.x - 1 && pj.y == pk.y)
@@ -30,7 +29,7 @@ int 		check_point(t_fig fig, int j, int k)
 		return (1);
 	if (pj.y == pk.y - 1 && pj.x == pk.x)
 		return (1);
-	return  (0);
+	return (0);
 }
 
 int			check_figures(t_fig *fig, int n_tetr)

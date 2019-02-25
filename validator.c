@@ -72,34 +72,27 @@ int			open_file(int fd, int fd2)
 {
 	char	**tab;
 	char	*line;
-	int		count;
-	int		count_1;
+	int		i[4];
 
-	count_1 = 1;
-	count = 0;
+	set_int(i, 0, 1);
 	tab = (char **)malloc(sizeof(char*) * (find_count(fd2) + 1) * 6);
 	while (get_next_line(fd, &line) == 1)
 	{
-		if (count_1 % 5 != 0)
+		if (i[2]++ % 5 != 0)
 		{
 			if (check_params(line) == 0)
-				return (0);
+				i[3] = 0;
 		}
 		else if ((int)line[0] != 0)
-			return (0);
-		tab[count++] = ft_strdup(line);
-		count_1++;
+			i[3] = 0;
+		tab[i[1]++] = ft_strdup(line);
 		ft_strdel(&line);
 	}
-	if (count % 5 != 4)
-		return (0);
-	tab[count] = NULL;
-	if (check_lines(tab) == 0)
-		return (0);
-	int l = 0;
-	while (l < count)
-		ft_strdel(&tab[l++]);
+	tab[i[1]] = NULL;
+	if (i[1] % 5 != 4 || check_lines(tab) == 0)
+		i[3] = 0;
+	while (i[0] < i[1])
+		ft_strdel(&tab[i[0]++]);
 	free(tab);
-	// free_mem(&tab, &line, count);
-	return ((count + 1) / 5);
+	return ((i[3] == 0) ? 0 : (i[1] + 1) / 5);
 }

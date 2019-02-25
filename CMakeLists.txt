@@ -77,5 +77,4 @@ add_executable(fillit
     templete.c
     tools.c
     tools2.c
-    validator.c
-    validator_old.c)
+    validator.c)
